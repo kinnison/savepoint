@@ -90,7 +90,13 @@ impl<'a> SavePoint<'a> {
         match (&self, res) {
             // noop
             (Self { state: Passing, .. }, Ok(_)) => Ok(self),
-            (Self { state: Failing, .. } | Self { state: Passing, .. }, Err(_)) => Ok(self.fail()),
+            (
+                Self {
+                    state: Failing | Passing,
+                    ..
+                },
+                Err(_),
+            ) => Ok(self.fail()),
             // notify, git commit
             (Self { state: Failing, .. }, Ok(_)) => self.pass(dryrun),
         }
