@@ -1,6 +1,6 @@
 ## [Can't beat the boss? Load a previous save!](https://savepoint.namtao.com)
 
-<img src="logo.jpg" alt="Savepoint logo" height="150px" align="right">
+<img src="savepoint-white.png" alt="Savepoint logo" height="150px" align="right">
 
 _A command watcher that commits when you fix errors_
 
