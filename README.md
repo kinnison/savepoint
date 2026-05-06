@@ -1,12 +1,10 @@
 ## [Can't beat the boss? Load a previous save!](https://savepoint.namtao.com)
 
 <picture>
-  <source height="150px" media="(prefers-color-scheme: dark)" srcset="/savepoint-white.png">
-  <source media="(prefers-color-scheme: light)" srcset="/savepoint.png">
+  <source height="150px" align="right" media="(prefers-color-scheme: dark)" srcset="/savepoint-white.png">
+  <source height="150px" align="right" media="(prefers-color-scheme: light)" srcset="/savepoint.png">
   <img alt="Savepoint logo" src="savepoint-white.png">
 </picture>
-
-<img src="savepoint-white.png" alt="Savepoint logo" height="150px" align="right">
 
 _A command watcher that commits when you fix errors_
 
