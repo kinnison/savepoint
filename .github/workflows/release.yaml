@@ -20,6 +20,7 @@ jobs:
         shell: bash
         run: |
           release_version=v${GITHUB_REF:11}
+          echo "tag: ${release_version}"
           r=$(./scripts/parse-changelog.sh "${release_version}")
           r="${r//'%'/'%25'}"
           r="${r//$'\n'/'%0A'}"
