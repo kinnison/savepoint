@@ -220,9 +220,30 @@ fn create_errfile() -> Result<()> {
     command.run()?;
     Ok(())
 }
+
 fn rm_errfile() -> Result<()> {
     let mut command = Command::with_args("rm", [ERRFILE]);
     command.log_command = false;
     command.run()?;
     Ok(())
+}
+
+#[cfg(test)]
+#[expect(clippy::unwrap_used)]
+mod tests {
+    use rstest::*;
+
+    use super::*;
+
+    #[rstest]
+    #[case(State::Passing, "which", "which")]
+    #[case(State::Failing, "which", "nonexistingbin12345")]
+    #[timeout(Duration::from_secs(1))]
+    // TODO: Refactor this
+    fn app_test(#[case] state: State, #[case] program: &str, #[case] params: String) {
+        let params = &[params];
+        let app = SavePoint::new(program, params);
+        let run = app.test(program, true, true);
+        assert_eq!(run.unwrap().state, state);
+    }
 }
