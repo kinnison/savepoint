@@ -10,9 +10,9 @@
 ## [Can't beat the boss? Load a previous save!](https://savepoint.namtao.com)
 
 <picture>
-  <source height="150px" align="right" media="(prefers-color-scheme: dark)" srcset="/savepoint-white.png">
-  <source height="150px" align="right" media="(prefers-color-scheme: light)" srcset="/savepoint.png">
-  <img alt="Savepoint logo" align="right" height="150px" src="savepoint-white.png">
+  <source height="150px" align="right" media="(prefers-color-scheme: dark)" srcset="https://www.namtao.com/img/user/Resources/Meta/attachments/savepoint-white.png">
+  <source height="150px" align="right" media="(prefers-color-scheme: light)" srcset="[/savepoint.png](https://www.namtao.com/img/user/Resources/Meta/attachments/savepoint.png)">
+  <img alt="Savepoint logo" align="right" height="150px" src="https://www.namtao.com/img/user/Resources/Meta/attachments/savepoint-white.png">
 </picture>
 
 _A command watcher that commits when you fix errors_
