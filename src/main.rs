@@ -176,13 +176,12 @@ fn main() -> Result<()> {
                 {
                     // git was not found
                     return Err(eyre!("could not find `git` command"));
-                } else {
-                    // Another error occured
-                    return Err(eyre!(
-                        "checking for `git` command failed with unexpected error {}",
-                        e
-                    ));
                 }
+                // Another error occured
+                return Err(eyre!(
+                    "checking for `git` command failed with unexpected error {}",
+                    e
+                ));
             }
         }
     }
